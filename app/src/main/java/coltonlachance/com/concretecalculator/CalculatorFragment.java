@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +62,73 @@ public class CalculatorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calculator, container, false);
+        View view = inflater.inflate(R.layout.fragment_calculator, container, false);
+
+        TextView showCalcTV = view.findViewById(R.id.showCalcTV);
+
+        //Rectangles (SLABS)
+        EditText rectWidthInput = view.findViewById(R.id.numInputWidth);
+        EditText rectLengthInput = view.findViewById(R.id.numInputLength);
+        EditText rectHeightInput = view.findViewById(R.id.numInputHeightSlabs);
+        EditText rectNumInput = view.findViewById(R.id.numInputNumberSlabs);
+
+
+        //Circular
+        EditText circOuterInput = view.findViewById(R.id.numInputOuter);
+        EditText circInnerInput = view.findViewById(R.id.numInputInner);
+        EditText circHeightInput = view.findViewById(R.id.numInputHeightCirc);
+        EditText circNumInput = view.findViewById(R.id.numInputNumberCirc);
+
+
+        Button calcButton = view.findViewById(R.id.calcButton);
+
+        calcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double rectWidth = getInputVal(rectWidthInput.getText().toString());
+                double rectLength = getInputVal(rectLengthInput.getText().toString());
+                double rectHeight = getInputVal(rectHeightInput.getText().toString());
+                double rectNum = getInputVal(rectNumInput.getText().toString());
+
+                double circOuter = getInputVal(circOuterInput.getText().toString());
+                double circInner = getInputVal(circInnerInput.getText().toString());
+                double circHeight = getInputVal(circHeightInput.getText().toString());
+                double circNum = getInputVal(circNumInput.getText().toString());
+
+                //Calc volume
+                double volume1 = calcSlabVolume(rectWidth,rectLength,rectHeight/100,false);
+                double volume2 = calcSlabVolume(circOuter,circInner,circHeight/100,true);
+                volume1 *= rectNum;
+                volume2 *= circNum;
+
+                double addedVolume = volume1+volume2;
+
+                int finalVolume = Math.abs(Math.round((float)addedVolume));
+
+                String volText = "[The total amount of concrete needed is " + finalVolume + "m\u00B3" + " +- 1]";
+                showCalcTV.setText(volText);
+            }
+        });
+
+        return view;
+    }
+
+    private double calcSlabVolume(double x1, double x2, double x3, boolean isCircular) {
+        double volume = 0.0;
+        if (!isCircular) {
+            volume = x1*x2*x3;
+        }else{
+            volume = (Math.PI*(x1/2)*x3)-(Math.PI*(x2/2)*x3);
+        }
+        return volume;
+    }
+
+    private double getInputVal(String inputVal) {
+        double val = 0.0;
+
+        if (!inputVal.equals("")) {
+            val = Double.parseDouble(inputVal);
+        }
+        return val;
     }
 }
