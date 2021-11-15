@@ -11,10 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CalculatorFragment#newInstance} factory method to
- * create an instance of this fragment.
+/** Calculator Fragment
+  * Calculator fragment, takes in 3 variables and returns volume for either rectanglar/circular slabs
+ * @author Colton LaChance
  */
 public class CalculatorFragment extends Fragment {
 
@@ -112,6 +111,15 @@ public class CalculatorFragment extends Fragment {
         return view;
     }
 
+    /** double calcSlabVolume()
+     * Takes in three variables and calculates rectangular or circular volume
+     * @param x1
+     * @param x2
+     * @param x3
+     * @param isCircular
+     * @return volune
+     * @author Colton LaChance
+     */
     private double calcSlabVolume(double x1, double x2, double x3, boolean isCircular) {
         double volume = 0.0;
         if (!isCircular) {
@@ -122,6 +130,12 @@ public class CalculatorFragment extends Fragment {
         return volume;
     }
 
+    /**getInputVal()
+     * Takes in a string and converts it to a Double if the string doesn't equal null
+     * @param inputVal
+     * @return
+     * @author Colton LaChance
+     */
     private double getInputVal(String inputVal) {
         double val = 0.0;
 

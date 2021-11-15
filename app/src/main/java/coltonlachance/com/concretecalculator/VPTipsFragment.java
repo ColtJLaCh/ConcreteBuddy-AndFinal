@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link VPTipsFragment#newInstance} factory method to
- * create an instance of this fragment.
+/**VPTipsFragment
+ * The .java class for the fragment_v_p_tips.xml, takes in parameters and using
+ * the CustomViewPageAdapter.java, creates a new fragment for the ViewPager2
+ * @author Colton LaChance
  */
 public class VPTipsFragment extends Fragment {
 
