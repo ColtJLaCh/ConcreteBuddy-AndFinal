@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,12 +19,16 @@ public class VPTipsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_NUM = "0";
+    private static final String ARG_TITLE = "title";
+    private static final String ARG_IMG_ID = "id";
+    private static final String ARG_DESC = "desc";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private int mNum;
+    private String mTitle;
+    private int mImgId;
+    private String mDesc;
 
     public VPTipsFragment() {
         // Required empty public constructor
@@ -37,11 +43,13 @@ public class VPTipsFragment extends Fragment {
      * @return A new instance of fragment VPTipsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static VPTipsFragment newInstance(String param1, String param2) {
+    public static VPTipsFragment newInstance(int num, String title, int imgId, String desc) {
         VPTipsFragment fragment = new VPTipsFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putInt(ARG_NUM, num);
+        args.putString(ARG_TITLE, title);
+        args.putInt(ARG_IMG_ID, imgId);
+        args.putString(ARG_DESC, desc);
         fragment.setArguments(args);
         return fragment;
     }
@@ -50,8 +58,10 @@ public class VPTipsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            mNum = getArguments().getInt(ARG_NUM);
+            mTitle = getArguments().getString(ARG_TITLE);
+            mImgId = getArguments().getInt(ARG_IMG_ID);
+            mDesc = getArguments().getString(ARG_DESC);
         }
     }
 
@@ -59,6 +69,22 @@ public class VPTipsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_v_p_tips, container, false);
+        View view = inflater.inflate(R.layout.fragment_v_p_tips, container, false);
+        TextView tipNumTV = view.findViewById(R.id.tipNumberTV);
+        TextView tipTitleTV = view.findViewById(R.id.tipTitleTV);
+        ImageView tipIV = view.findViewById(R.id.tipIV);
+        TextView tipDescTV = view.findViewById(R.id.tipDescTV);
+
+        if (mTitle != null) tipTitleTV.setText(mTitle);
+
+        String pageNumStr = "Tip #" + mNum;
+        if (mNum != 0) tipNumTV.setText(pageNumStr);
+
+        if (mImgId != -1) tipIV.setImageResource(mImgId);
+
+        if (mDesc != null) tipDescTV.setText(mDesc);
+
+
+        return view;
     }
 }

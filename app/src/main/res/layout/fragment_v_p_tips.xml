@@ -42,6 +42,7 @@
         android:layout_height="0dp"
         android:layout_weight="9"
         android:padding="8dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textSize="18sp" />
 
 </LinearLayout>
