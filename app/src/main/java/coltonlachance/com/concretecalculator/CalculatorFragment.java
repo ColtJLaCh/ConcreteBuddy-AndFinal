@@ -72,7 +72,6 @@ public class CalculatorFragment extends Fragment {
         EditText rectHeightInput = view.findViewById(R.id.numInputHeightSlabs);
         EditText rectNumInput = view.findViewById(R.id.numInputNumberSlabs);
 
-
         //Circular
         EditText circOuterInput = view.findViewById(R.id.numInputOuter);
         EditText circInnerInput = view.findViewById(R.id.numInputInner);
@@ -103,7 +102,7 @@ public class CalculatorFragment extends Fragment {
 
                 double addedVolume = volume1+volume2;
 
-                int finalVolume = Math.abs(Math.round((float)addedVolume));
+                float finalVolume = (float)addedVolume;
 
                 String volText = "[The total amount of concrete needed is " + finalVolume + "m\u00B3" + " +- 1]";
                 showCalcTV.setText(volText);
