@@ -22,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="8dp"
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -33,7 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="6"
-        android:adjustViewBounds="true"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
         android:src="@drawable/normalbagofconcrete" />
 
     <TextView
