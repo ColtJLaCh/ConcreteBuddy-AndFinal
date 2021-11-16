@@ -38,8 +38,10 @@ public class VPTipsFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param num Parameter 1.
+     * @param title Parameter 2.
+     * @param imgId Parameter 3.
+     * @param desc Parameter 4.
      * @return A new instance of fragment VPTipsFragment.
      */
     // TODO: Rename and change types and number of parameters
