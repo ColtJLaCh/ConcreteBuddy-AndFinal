@@ -14,4 +14,9 @@
         android:name="coltonlachance.com.concretecalculator.TipsFragment"
         android:label="Tips"
         tools:layout="@layout/fragment_tips" />
+    <fragment
+        android:id="@+id/nav_listings"
+        android:name="coltonlachance.com.concretecalculator.ListingsFragment"
+        android:label="fragment_listings"
+        tools:layout="@layout/fragment_listings" />
 </navigation>
