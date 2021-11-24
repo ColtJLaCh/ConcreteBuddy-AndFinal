@@ -9,6 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+/**CustomRecyclerViewAdapter
+ * Used to hold list of concrete listings in a recycler view
+ * @author Colton LaChance
+ */
 public class CustomRecyclerViewAdapter extends RecyclerView.Adapter {
 
     private ArrayList<Listings> myListings;

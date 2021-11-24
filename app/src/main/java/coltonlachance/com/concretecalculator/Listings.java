@@ -1,5 +1,9 @@
 package coltonlachance.com.concretecalculator;
 
+/**Listings
+ * A pojo for a concrete listing
+ * @author Colton LaChance
+ */
 public class Listings {
     private String name;
     private String definition;
