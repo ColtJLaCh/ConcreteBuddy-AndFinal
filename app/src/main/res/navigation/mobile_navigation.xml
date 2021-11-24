@@ -17,6 +17,6 @@
     <fragment
         android:id="@+id/nav_listings"
         android:name="coltonlachance.com.concretecalculator.ListingsFragment"
-        android:label="fragment_listings"
+        android:label="Listings"
         tools:layout="@layout/fragment_listings" />
 </navigation>

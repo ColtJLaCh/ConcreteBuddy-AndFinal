@@ -103,7 +103,7 @@ public class CalculatorFragment extends Fragment {
 
                 float finalVolume = (float)addedVolume;
 
-                String volText = "[The total amount of concrete needed is " + finalVolume + "m\u00B3" + " +- 1]";
+                String volText = "[The total amount of concrete needed is " + String.format("%.2f",finalVolume) + "m\u00B3]";
                 showCalcTV.setText(volText);
             }
         });
