@@ -92,6 +92,8 @@ public class CalculatorFragment extends Fragment {
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         boolean setBold = sharedPreferences.getBoolean("bold",false);
+        String measurementType = sharedPreferences.getString("units","Metric");
+
         if (setBold) {
             widthSlabTV.setTypeface(null, Typeface.BOLD);
             widthSlabDescTV.setTypeface(null, Typeface.BOLD);
@@ -105,6 +107,16 @@ public class CalculatorFragment extends Fragment {
             numberSlabsTV.setTypeface(null, Typeface.BOLD);
             numberSlabsDescTV.setTypeface(null, Typeface.BOLD);
         }
+        if (measurementType.equals("Metric")) {
+            widthSlabDescTV.setText(R.string.calcWidthInMeters);
+            lengthSlabDescTV.setText(R.string.calcLengthInMeters);
+            heightSlabDescTV.setText(R.string.calcHeightInCm);
+        }else{
+            widthSlabDescTV.setText(R.string.calcWidthInFeet);
+            lengthSlabDescTV.setText(R.string.calcLengthInFeet);
+            heightSlabDescTV.setText(R.string.calcHeightInInches);
+        }
+
 
         //Load functionality
         EditText rectWidthInput = view.findViewById(R.id.numInputWidth);
@@ -140,6 +152,15 @@ public class CalculatorFragment extends Fragment {
             numberCircTV.setTypeface(null, Typeface.BOLD);
             numberCircDescTV.setTypeface(null, Typeface.BOLD);
         }
+        if (measurementType.equals("Metric")) {
+            outerCircDescTV.setText(R.string.calcOuterInMeters);
+            innerCircDescTV.setText(R.string.calcInnerInMeters);
+            heightCircDescTV.setText(R.string.calcHeightInCm);
+        }else{
+            outerCircDescTV.setText(R.string.calcOuterInFeet);
+            innerCircDescTV.setText(R.string.calcInnerInFeet);
+            heightCircDescTV.setText(R.string.calcHeightInInches);
+        }
 
         //Load functionality
         EditText circOuterInput = view.findViewById(R.id.numInputOuter);
@@ -164,8 +185,16 @@ public class CalculatorFragment extends Fragment {
                 double circNum = getInputVal(circNumInput.getText().toString());
 
                 //Calc volume
-                double volume1 = calcSlabVolume(rectWidth,rectLength,rectHeight/100,false);
-                double volume2 = calcSlabVolume(circOuter,circInner,circHeight/100,true);
+                double volume1 = 0;
+                double volume2 = 0;
+                if (measurementType.equals("Metric")) {
+                    volume1 = calcSlabVolume(rectWidth, rectLength, rectHeight / 100, false);
+                    volume2 = calcSlabVolume(circOuter, circInner, circHeight / 100, true);
+                }else{
+                    volume1 = calcSlabVolume(rectWidth, rectLength, rectHeight / 12, false);
+                    volume2 = calcSlabVolume(circOuter, circInner, circHeight / 12, true);
+                }
+
                 volume1 *= rectNum;
                 volume2 *= circNum;
 
@@ -173,10 +202,14 @@ public class CalculatorFragment extends Fragment {
 
                 float finalVolume = (float)addedVolume;
 
-                String volText = "[The total amount of concrete needed is " + String.format("%.2f",finalVolume) + "m\u00B3]";
+                String volText = "[The total amount of concrete needed is " + String.format("%.2f",finalVolume) + (measurementType.equals("Metric") ? "m" : "ft") + "\u00B3]";
+
                 showCalcTV.setText(volText);
             }
         });
+
+        //More Prefs
+        if (setBold) showCalcTV.setTypeface(null,Typeface.BOLD);
 
         return view;
     }

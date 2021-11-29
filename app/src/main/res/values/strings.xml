@@ -27,12 +27,19 @@
     <string name="calcLengthInMeters">(Length in meters)</string>
     <string name="calcHeightInCm">(Height in centimeters)</string>
 
+    <string name="calcWidthInFeet">(Width in ft)</string>
+    <string name="calcLengthInFeet">(Length in ft)</string>
+    <string name="calcHeightInInches">(Height in inches)</string>
+
     <string name="calcCircular">Circular</string>
     <string name="calcOuter">Outer</string>
     <string name="calcInner">Inner</string>
 
     <string name="calcOuterInMeters">(Out. Diameter in meters)</string>
     <string name="calcInnerInMeters">(In. Diameter in meters)</string>
+
+    <string name="calcOuterInFeet">(Out. Diameter in ft)</string>
+    <string name="calcInnerInFeet">(In. Diameter in ft)</string>
 
     <string name="calcNumber">Number</string>
     <string name="calcNumberOf">(Number Of Slabs)</string>
