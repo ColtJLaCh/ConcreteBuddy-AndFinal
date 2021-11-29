@@ -1,8 +1,16 @@
 package coltonlachance.com.concretecalculator;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,15 +71,77 @@ public class CalculatorFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_calculator, container, false);
 
+
         TextView showCalcTV = view.findViewById(R.id.showCalcTV);
 
         //Rectangles (SLABS)
+
+        //Load preferences
+        TextView widthSlabTV = view.findViewById(R.id.calcWidthTV);
+        TextView widthSlabDescTV = view.findViewById(R.id.calcWidthInTV);
+
+        TextView lengthSlabTV = view.findViewById(R.id.calcLengthTV);
+        TextView lengthSlabDescTV = view.findViewById(R.id.calcLengthInTV);
+
+        TextView heightSlabTV = view.findViewById(R.id.calcHeightSlabsTV);
+        TextView heightSlabDescTV = view.findViewById(R.id.calcHeightInSlabsTV);
+
+        TextView numberSlabsTV = view.findViewById(R.id.calcNumberSlabsTV);
+        TextView numberSlabsDescTV = view.findViewById(R.id.calcNumberOfSlabsTV);
+
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        boolean setBold = sharedPreferences.getBoolean("bold",false);
+        if (setBold) {
+            widthSlabTV.setTypeface(null, Typeface.BOLD);
+            widthSlabDescTV.setTypeface(null, Typeface.BOLD);
+
+            lengthSlabTV.setTypeface(null, Typeface.BOLD);
+            lengthSlabDescTV.setTypeface(null, Typeface.BOLD);
+
+            heightSlabTV.setTypeface(null, Typeface.BOLD);
+            heightSlabDescTV.setTypeface(null, Typeface.BOLD);
+
+            numberSlabsTV.setTypeface(null, Typeface.BOLD);
+            numberSlabsDescTV.setTypeface(null, Typeface.BOLD);
+        }
+
+        //Load functionality
         EditText rectWidthInput = view.findViewById(R.id.numInputWidth);
         EditText rectLengthInput = view.findViewById(R.id.numInputLength);
         EditText rectHeightInput = view.findViewById(R.id.numInputHeightSlabs);
         EditText rectNumInput = view.findViewById(R.id.numInputNumberSlabs);
 
         //Circular
+
+        //Load preferences
+        TextView outerCircTV = view.findViewById(R.id.calOuterTV);
+        TextView outerCircDescTV = view.findViewById(R.id.calcOuterInTV);
+
+        TextView innerCircTV = view.findViewById(R.id.calcInnerTV);
+        TextView innerCircDescTV = view.findViewById(R.id.calcInnerInTV);
+
+        TextView heightCircTV = view.findViewById(R.id.calcHeightCircTV);
+        TextView heightCircDescTV = view.findViewById(R.id.calcHeightInCircTV);
+
+        TextView numberCircTV = view.findViewById(R.id.calcNumberCircTV);
+        TextView numberCircDescTV = view.findViewById(R.id.calcNumberOfCircTV);
+
+        if (setBold) {
+            outerCircTV.setTypeface(null, Typeface.BOLD);
+            outerCircDescTV.setTypeface(null, Typeface.BOLD);
+
+            innerCircTV.setTypeface(null, Typeface.BOLD);
+            innerCircDescTV.setTypeface(null, Typeface.BOLD);
+
+            heightCircTV.setTypeface(null, Typeface.BOLD);
+            heightCircDescTV.setTypeface(null, Typeface.BOLD);
+
+            numberCircTV.setTypeface(null, Typeface.BOLD);
+            numberCircDescTV.setTypeface(null, Typeface.BOLD);
+        }
+
+        //Load functionality
         EditText circOuterInput = view.findViewById(R.id.numInputOuter);
         EditText circInnerInput = view.findViewById(R.id.numInputInner);
         EditText circHeightInput = view.findViewById(R.id.numInputHeightCirc);

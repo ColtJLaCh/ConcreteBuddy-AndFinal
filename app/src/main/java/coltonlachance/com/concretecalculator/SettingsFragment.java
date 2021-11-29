@@ -1,5 +1,6 @@
 package coltonlachance.com.concretecalculator;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.FragmentManager;
@@ -16,11 +17,13 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         setPreferencesFromResource(R.xml.root_preferences, rootKey);
     }
 
-    Preference myPref = (Preference) findPreference("feedback");
+    Preference feedback = (Preference) findPreference("feedback");
     @Override
     public boolean onPreferenceTreeClick(Preference myPref) {
-        NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-        navController.navigate(R.id.nav_listings);
+        if (myPref.getKey().equals("feedback")) {
+            NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.nav_listings); //TODO: Change this to contact page
+        }
         return super.onPreferenceTreeClick(myPref);
     }
 }
