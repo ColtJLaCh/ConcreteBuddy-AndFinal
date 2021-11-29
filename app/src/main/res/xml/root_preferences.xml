@@ -1,34 +1,22 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="@string/hello_blank_fragment">
+    <PreferenceCategory app:title="@string/settingsTitle">
 
-        <EditTextPreference
-            app:key="signature"
-            app:title="@string/hello_blank_fragment"
-            app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat
+            app:key="bold"
+            app:title="@string/settingsSetBold" />
 
         <ListPreference
-            app:defaultValue="reply"
-            app:entries="@array/reply_entries"
-            app:entryValues="@array/reply_values"
-            app:key="reply"
-            app:title="@string/hello_blank_fragment"
+            app:defaultValue="Metric"
+            app:entries="@array/units"
+            app:entryValues="@array/units"
+            app:key="units"
+            app:title="@string/settingsMeasurementType"
             app:useSimpleSummaryProvider="true" />
 
-    </PreferenceCategory>
-
-    <PreferenceCategory app:title="@string/hello_blank_fragment">
-
-        <SwitchPreferenceCompat
-            app:key="sync"
-            app:title="Movie List Grid Style" />
-
-        <SwitchPreferenceCompat
-            app:dependency="sync"
-            app:key="attachment"
-            app:summaryOff="@string/hello_blank_fragment"
-            app:summaryOn="@string/hello_blank_fragment"
-            app:title="@string/hello_blank_fragment" />
+        <Preference
+            app:key="feedback"
+            app:title="@string/settingsSendFeedback" />
 
     </PreferenceCategory>
 

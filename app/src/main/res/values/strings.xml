@@ -7,12 +7,15 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!-- menu text -->
     <string name="menu_calc">Calculator</string>
     <string name="menu_tips">Tips</string>
     <string name="menu_listings">Listings</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- calculator text -->
     <string name="calcTitle">Calculator</string>
 
     <string name="calcSlabs">Slabs</string>
@@ -37,4 +40,10 @@
     <string name="calcCalculate">Calculate</string>
 
     <string name="calcPressCalculate">[Press Calculate to see how much concrete is needed]</string>
+
+    <!-- settings text -->
+    <string name="settingsTitle">Concrete Calculator Settings</string>
+    <string name="settingsSetBold">Bold Text</string>
+    <string name="settingsMeasurementType">Set Units</string>
+    <string name="settingsSendFeedback">Send App Feedback</string>
 </resources>
