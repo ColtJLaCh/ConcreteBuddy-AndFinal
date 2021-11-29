@@ -2,7 +2,7 @@ package coltonlachance.com.concretecalculator;
 
 import android.os.Bundle;
 
-import
+import androidx.preference.PreferenceFragmentCompat;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
