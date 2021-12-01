@@ -1,10 +1,22 @@
 package coltonlachance.com.concretecalculator;
 
+import android.Manifest;
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Typeface;
+import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -12,18 +24,30 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
+import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Date;
 
 /** Calculator Fragment
   * Calculator fragment, takes in 3 variables and returns volume for either rectanglar/circular slabs
  * @author Colton LaChance
  */
 public class CalculatorFragment extends Fragment {
+
+    private static final int REQUEST_EXTERNAL_STORAGe = 1;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -205,6 +229,11 @@ public class CalculatorFragment extends Fragment {
                 String volText = "[The total amount of concrete needed is " + String.format("%.2f",finalVolume) + (measurementType.equals("Metric") ? "m" : "ft") + "\u00B3]";
 
                 showCalcTV.setText(volText);
+
+
+                /*if (verifystoragepermissions(getActivity(),view)) {
+                    screenshot(view, "concretecalc");
+                }*/
             }
         });
 
@@ -247,4 +276,73 @@ public class CalculatorFragment extends Fragment {
         }
         return val;
     }
+
+    /*
+    protected static File screenshot(View view, String filename) {
+    Date date = new Date();
+
+    // Here we are initialising the format of our image name
+    CharSequence format = android.text.format.DateFormat.format("yyyy-MM-dd_hh:mm:ss", date);
+
+        // Initialising the directory of storage
+        File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        File dir = new File(path.getAbsolutePath());
+        if (!dir.exists())
+            path.mkdirs();
+
+        // File name
+        String fname = filename + "-" + format + ".jpeg";
+        File image = new File(path,fname);
+        try {
+            Bitmap bitmap = Bitmap.createBitmap(view.getWidth() , view.getHeight(), Bitmap.Config.ARGB_8888);
+            Canvas c = new Canvas(bitmap);
+            view.draw(c);
+
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 0 , bos);
+            byte[] bitmapdata = bos.toByteArray();
+
+            FileOutputStream fos = new FileOutputStream(image);
+            fos.write(bitmapdata);
+            fos.flush();
+            fos.close();
+            return image;
+
+        }catch (Exception e){
+            e.printStackTrace();
+            return null; // it will return null
+        }
+    }
+     */
+
+    /* TODO: FOR USE LATER ONCE I FIGURE OUT SAVE FUNCTIONALITY
+    // verifying if storage permission is given or not
+    public static boolean verifystoragepermissions(Activity activity,View view) {
+
+        if (ContextCompat.checkSelfPermission(activity,Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(activity,Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            // If storage permission is not given then request for External Storage Permission
+            if (ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+
+                final AlertDialog alertDialog = new AlertDialog.Builder(view.getContext()).create();
+                alertDialog.setTitle("Save Screenshots");
+                alertDialog.setMessage("This app needs permission to save screenshots to your phone in order to save your calculations.");
+                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        alertDialog.dismiss();
+                        ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE}, 2);
+                    }
+                });
+
+                alertDialog.show();
+            } else {
+                ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE}, 2);
+            }
+
+            return false;
+        }else{
+            return true;
+        }
+    }
+     */
 }
