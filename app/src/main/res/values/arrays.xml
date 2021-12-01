@@ -1,0 +1,7 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="units">
+        <item>Metric</item>
+        <item>Imperial</item>
+    </string-array>
+</resources>
