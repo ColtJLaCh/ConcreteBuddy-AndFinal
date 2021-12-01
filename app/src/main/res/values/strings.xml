@@ -7,8 +7,50 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!-- menu text -->
     <string name="menu_calc">Calculator</string>
     <string name="menu_tips">Tips</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="menu_listings">Listings</string>
+
+    <!-- placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- calculator text -->
+    <string name="calcTitle">Calculator</string>
+
+    <string name="calcSlabs">Slabs</string>
+    <string name="calcWidth">Width</string>
+    <string name="calcLength">Length</string>
+    <string name="calcHeight">Height</string>
+
+    <string name="calcWidthInMeters">(Width in meters)</string>
+    <string name="calcLengthInMeters">(Length in meters)</string>
+    <string name="calcHeightInCm">(Height in centimeters)</string>
+
+    <string name="calcWidthInFeet">(Width in ft)</string>
+    <string name="calcLengthInFeet">(Length in ft)</string>
+    <string name="calcHeightInInches">(Height in inches)</string>
+
+    <string name="calcCircular">Circular</string>
+    <string name="calcOuter">Outer</string>
+    <string name="calcInner">Inner</string>
+
+    <string name="calcOuterInMeters">(Out. Diameter in meters)</string>
+    <string name="calcInnerInMeters">(In. Diameter in meters)</string>
+
+    <string name="calcOuterInFeet">(Out. Diameter in ft)</string>
+    <string name="calcInnerInFeet">(In. Diameter in ft)</string>
+
+    <string name="calcNumber">Number</string>
+    <string name="calcNumberOf">(Number Of Slabs)</string>
+
+    <string name="calcCalculate">Calculate</string>
+
+    <string name="calcPressCalculate">[Press Calculate to see how much concrete is needed]</string>
+
+    <!-- settings text -->
+    <string name="settingsTitle">Concrete Calculator Settings</string>
+    <string name="settingsSetBold">Bold Text</string>
+    <string name="settingsMeasurementType">Set Units</string>
+    <string name="settingsSendFeedback">Send App Feedback</string>
 </resources>

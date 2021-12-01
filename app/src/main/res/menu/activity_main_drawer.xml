@@ -12,5 +12,9 @@
             android:id="@+id/nav_tips"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_tips" />
+        <item
+            android:id="@+id/nav_listings"
+            android:icon="@drawable/ic_baseline_view_list_24"
+            android:title="@string/menu_listings" />
     </group>
 </menu>

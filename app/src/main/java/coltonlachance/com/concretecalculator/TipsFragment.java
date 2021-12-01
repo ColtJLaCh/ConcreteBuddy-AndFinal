@@ -9,10 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TipsFragment#newInstance} factory method to
- * create an instance of this fragment.
+/**TipsFragment
+ * Utilizes a ViewPager2 and creates a scrollable tips fragment
+ * @author Colton LaChance
  */
 public class TipsFragment extends Fragment {
 
