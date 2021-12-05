@@ -24,6 +24,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -53,6 +54,18 @@ public class MainActivity extends AppCompatActivity {
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(menuOpt -> {
+            NavOptions.Builder optionsBuilder = new NavOptions.Builder();
+            optionsBuilder.setEnterAnim(R.anim.quick_fade_in);
+            optionsBuilder.setExitAnim(R.anim.quick_fade_out);
+            optionsBuilder.setPopEnterAnim(R.anim.quick_fade_back_in);
+            optionsBuilder.setPopExitAnim(R.anim.quick_fade_back_out);
+
+            navController.navigate(menuOpt.getItemId(),null, optionsBuilder.build());
+
+            return true;
+        });
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
