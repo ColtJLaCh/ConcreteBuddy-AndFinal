@@ -7,4 +7,11 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="largeButtonMargin">16dp</dimen>
+    <dimen name="titleMedium">34sp</dimen>
+    <dimen name="buttonMediumText">24sp</dimen>
+    <dimen name="buttonLargeText">34sp</dimen>
+    <dimen name="paragraphText">16sp</dimen>
+    <dimen name="listText">20sp</dimen>
+    <dimen name="labelText">14sp</dimen>
+    <dimen name="tipMargin">20sp</dimen>
 </resources>

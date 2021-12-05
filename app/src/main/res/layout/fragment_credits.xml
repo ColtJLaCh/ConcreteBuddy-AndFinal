@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreditsFragment"
-    android:orientation="vertical">
+    android:background="#404040"
+    android:orientation="vertical"
+    tools:context=".CreditsFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -12,7 +13,10 @@
         android:id="@+id/dataTypeList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"></ListView>
+        android:layout_weight="3"
+        android:background="#FFFFFF"
+        android:paddingTop="20dp"></ListView>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,10 +26,15 @@
             android:id="@+id/DataTypeDesc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="@dimen/largeButtonMargin"
+            android:background="#6A6A6A"
+            android:fontFamily="@font/imprima"
             android:padding="10dp"
             android:text="@string/creditPrompt"
             android:textAlignment="center"
-            android:textSize="18sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/titleMedium"
+            android:textStyle="bold" />
     </ScrollView>
 
 </LinearLayout>

@@ -15,13 +15,13 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="10sp"
         android:layout_weight="5"
-        android:fontFamily="monospace"
+        android:fontFamily="@font/alfa_slab_one"
         android:padding="8sp"
         android:text="@string/calcTitle"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="36sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="italic" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,11 +34,11 @@
             android:id="@+id/calcSlabsTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="monospace"
+            android:fontFamily="@font/alfa_slab_one"
             android:padding="8dp"
             android:text="@string/calcSlabs"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="italic" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,9 +51,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3.7"
+                android:fontFamily="@font/imprima"
                 android:paddingRight="4dp"
                 android:text="@string/calcWidth"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="@dimen/labelText" />
 
             <EditText
                 android:id="@+id/numInputWidth"
@@ -63,7 +65,8 @@
                 android:background="#D6D6D6"
                 android:ems="10"
                 android:inputType="numberDecimal"
-                android:singleLine="false" />
+                android:singleLine="false"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/calcWidthInTV"
@@ -71,7 +74,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="2"
-                android:text="@string/calcWidthInMeters" />
+                android:fontFamily="@font/imprima"
+                android:text="@string/calcWidthInMeters"
+                android:textSize="@dimen/labelText" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,9 +90,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3.7"
+                android:fontFamily="@font/imprima"
                 android:paddingRight="4dp"
                 android:text="@string/calcLength"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="@dimen/labelText" />
 
             <EditText
                 android:id="@+id/numInputLength"
@@ -96,7 +103,8 @@
                 android:layout_weight="3"
                 android:background="#D6D6D6"
                 android:ems="10"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/calcLengthInTV"
@@ -104,7 +112,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="2"
-                android:text="@string/calcLengthInMeters" />
+                android:fontFamily="@font/imprima"
+                android:text="@string/calcLengthInMeters"
+                android:textSize="@dimen/labelText" />
 
         </LinearLayout>
 
@@ -119,8 +129,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3.7"
+                android:fontFamily="@font/imprima"
                 android:text="@string/calcHeight"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="@dimen/labelText" />
 
             <EditText
                 android:id="@+id/numInputHeightSlabs"
@@ -129,7 +141,8 @@
                 android:layout_weight="3"
                 android:background="#D6D6D6"
                 android:ems="10"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/calcHeightInSlabsTV"
@@ -137,7 +150,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="2"
-                android:text="@string/calcHeightInCm" />
+                android:fontFamily="@font/imprima"
+                android:text="@string/calcHeightInCm"
+                android:textSize="@dimen/labelText" />
 
         </LinearLayout>
 
@@ -152,8 +167,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3.7"
+                android:fontFamily="@font/imprima"
                 android:text="@string/calcNumber"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="@dimen/labelText" />
 
             <EditText
                 android:id="@+id/numInputNumberSlabs"
@@ -187,11 +204,11 @@
             android:id="@+id/calcCircularTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="monospace"
+            android:fontFamily="@font/alfa_slab_one"
             android:padding="8dp"
             android:text="@string/calcCircular"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="italic" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -204,8 +221,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3.7"
+                android:fontFamily="@font/imprima"
                 android:text="@string/calcOuter"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="@dimen/labelText" />
 
             <EditText
                 android:id="@+id/numInputOuter"
@@ -215,7 +234,8 @@
                 android:background="#D6D6D6"
                 android:ems="10"
                 android:inputType="numberDecimal"
-                android:singleLine="false" />
+                android:singleLine="false"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/calcOuterInTV"
@@ -223,7 +243,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="2"
-                android:text="@string/calcOuterInMeters" />
+                android:fontFamily="@font/imprima"
+                android:text="@string/calcOuterInMeters"
+                android:textSize="@dimen/labelText" />
         </LinearLayout>
 
         <LinearLayout
@@ -237,8 +259,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3.7"
+                android:fontFamily="@font/imprima"
                 android:text="@string/calcInner"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="@dimen/labelText" />
 
             <EditText
                 android:id="@+id/numInputInner"
@@ -247,7 +271,8 @@
                 android:layout_weight="3"
                 android:background="#D6D6D6"
                 android:ems="10"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/calcInnerInTV"
@@ -270,8 +295,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3.7"
+                android:fontFamily="@font/imprima"
                 android:text="@string/calcHeight"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="@dimen/labelText" />
 
             <EditText
                 android:id="@+id/numInputHeightCirc"
@@ -288,7 +315,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="2"
-                android:text="@string/calcHeightInCm" />
+                android:fontFamily="@font/imprima"
+                android:text="@string/calcHeightInCm"
+                android:textSize="@dimen/labelText" />
 
         </LinearLayout>
 
@@ -303,8 +332,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3.7"
+                android:fontFamily="@font/imprima"
                 android:text="@string/calcNumber"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="@dimen/labelText" />
 
             <EditText
                 android:id="@+id/numInputNumberCirc"
@@ -313,7 +344,8 @@
                 android:layout_weight="3"
                 android:background="#D6D6D6"
                 android:ems="10"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/calcNumberOfCircTV"
@@ -321,7 +353,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="2"
-                android:text="@string/calcNumberOf" />
+                android:fontFamily="@font/imprima"
+                android:text="@string/calcNumberOf"
+                android:textSize="@dimen/labelText" />
 
         </LinearLayout>
 
@@ -333,14 +367,17 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="24dp"
         android:layout_weight="5"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="@string/calcCalculate"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="@dimen/buttonMediumText" />
 
     <TextView
         android:id="@+id/showCalcTV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="5"
+        android:fontFamily="@font/aldrich"
         android:padding="8dp"
         android:text="@string/calcPressCalculate"
         android:textAlignment="center" />

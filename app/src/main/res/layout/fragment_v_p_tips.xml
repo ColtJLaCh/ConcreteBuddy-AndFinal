@@ -7,14 +7,22 @@
     android:orientation="vertical"
     tools:context=".VPTipsFragment">
 
+    <ImageView
+        android:id="@+id/arrowUpIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_keyboard_arrow_up_24" />
+
     <TextView
         android:id="@+id/tipNumberTV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:fontFamily="@font/imprima"
         android:padding="8dp"
         android:text="@string/hello_blank_fragment"
         android:textAlignment="textEnd"
+        android:textSize="@dimen/labelText"
         android:textStyle="bold|italic" />
 
     <TextView
@@ -22,11 +30,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/alfa_slab_one"
         android:text="TextView"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="italic" />
 
     <ImageView
         android:id="@+id/tipIV"
@@ -41,10 +49,19 @@
         android:id="@+id/tipDescTV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="@dimen/tipMargin"
         android:layout_weight="9"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/imprima"
         android:padding="8dp"
         android:text="TextView"
-        android:textSize="18sp" />
+        android:textAlignment="viewStart"
+        android:textSize="@dimen/paragraphText"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/arrowDownIV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
 </LinearLayout>

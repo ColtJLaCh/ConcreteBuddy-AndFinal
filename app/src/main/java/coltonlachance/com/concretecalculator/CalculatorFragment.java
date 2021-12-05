@@ -224,7 +224,7 @@ public class CalculatorFragment extends Fragment {
 
                 float finalVolume = (float)addedVolume;
 
-                String volText = "[The total amount of concrete needed is " + String.format("%.2f",finalVolume) + (measurementType.equals("Metric") ? "m" : "ft") + "\u00B3]";
+                String volText = "The total amount of concrete needed is " + String.format("%.2f",finalVolume) + (measurementType.equals("Metric") ? "m" : "ft") + "\u00B3";
 
                 showCalcTV.setText(volText);
 

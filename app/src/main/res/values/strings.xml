@@ -54,7 +54,7 @@
 
     <string name="calcCalculate">Calculate</string>
 
-    <string name="calcPressCalculate">[Press Calculate to see how much concrete is needed]</string>
+    <string name="calcPressCalculate">Press Calculate to see how much concrete is needed</string>
 
     <!-- settings text -->
     <string name="settingsTitle">Concrete Calculator Settings</string>
