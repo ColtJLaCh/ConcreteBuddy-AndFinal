@@ -71,28 +71,46 @@ public class ContactFragment extends Fragment {
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String[] emailaddresses = {"CL51@myscc.ca"};
+                String[] emailCCs = {"concretebuddy@outlook.com"};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL,emailaddresses);
+                intent.putExtra(Intent.EXTRA_CC,emailCCs);
+                intent.putExtra(Intent.EXTRA_SUBJECT, "CONCRETE BUDDY");
+                intent.putExtra(Intent.EXTRA_TEXT,"FEEDBACK OR INQUIRY ON APP: ");
+                startActivity(intent);
             }
         });
 
         SMSButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("smsto:"));
+                intent.putExtra("sms_body","FEEDBACK OR INQUIRY ON APP: ");
+                intent.putExtra("address",  "555-555-5555");
+                startActivity(intent);
             }
         });
 
         phoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:555-555-5555"));
+                startActivity(intent);
             }
         });
 
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Uri geoLocation = Uri.parse("geo:0,0?q=42.2484642,-83.0203191");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geoLocation);
+                intent.setPackage("com.google.android.apps.maps");
+                startActivity(intent);
             }
         });
 
