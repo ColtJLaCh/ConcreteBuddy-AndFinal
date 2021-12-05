@@ -1,5 +1,7 @@
 package coltonlachance.com.concretecalculator;
 
+import android.app.SearchManager;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -76,7 +79,15 @@ public class ListingsFragment extends Fragment {
         listings.add(new Listings("Bag of concrete, fiber glass mix.", "A 4oz bag of fiber glass strengthened concrete.", "29.99"));
         listings.add(new Listings("SLABS", "I got 30+ slabs I want to get rid of, real cheap!", "2.50"));
 
-
+        Button listingsButton = view.findViewById(R.id.listingsButton);
+        listingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                intent.putExtra(SearchManager.QUERY, "concrete listings");
+                startActivity(intent);
+            }
+        });
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
