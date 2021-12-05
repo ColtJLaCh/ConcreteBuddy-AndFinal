@@ -1,67 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".VPTipsFragment">
+    app:cardBackgroundColor="#FFFFFF">
 
-    <ImageView
-        android:id="@+id/arrowUpIV"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_keyboard_arrow_up_24" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".VPTipsFragment">
 
-    <TextView
-        android:id="@+id/tipNumberTV"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/imprima"
-        android:padding="8dp"
-        android:text="@string/hello_blank_fragment"
-        android:textAlignment="textEnd"
-        android:textSize="@dimen/labelText"
-        android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/tipNumberTV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/imprima"
+            android:padding="8dp"
+            android:text="@string/hello_blank_fragment"
+            android:textAlignment="textEnd"
+            android:textSize="@dimen/labelText"
+            android:textStyle="bold|italic" />
 
-    <TextView
-        android:id="@+id/tipTitleTV"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="TextView"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="italic" />
+        <TextView
+            android:id="@+id/tipTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#8E8E8E"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#FDFDFD"
+            android:textSize="24sp"
+            android:textStyle="italic" />
 
-    <ImageView
-        android:id="@+id/tipIV"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="6"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false"
-        android:src="@drawable/normalbagofconcrete" />
+        <ImageView
+            android:id="@+id/tipIV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:adjustViewBounds="true"
+            android:background="#8E8E8E"
+            android:cropToPadding="false"
+            android:paddingBottom="24dp"
+            android:src="@drawable/construction" />
 
-    <TextView
-        android:id="@+id/tipDescTV"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/tipMargin"
-        android:layout_weight="9"
-        android:fontFamily="@font/imprima"
-        android:padding="8dp"
-        android:text="TextView"
-        android:textAlignment="viewStart"
-        android:textSize="@dimen/paragraphText"
-        android:textStyle="bold" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9">
 
-    <ImageView
-        android:id="@+id/arrowDownIV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_keyboard_arrow_down_24" />
+            <TextView
+                android:id="@+id/tipDescTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/tipMargin"
+                android:background="#E1E1E1"
+                android:fontFamily="@font/imprima"
+                android:paddingStart="16dp"
+                android:paddingTop="32dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="128dp"
+                android:text="TextView"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/titleMedium"
+                android:textStyle="bold" />
+        </ScrollView>
 
-</LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

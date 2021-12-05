@@ -79,7 +79,7 @@ public class VPTipsFragment extends Fragment {
 
         if (mTitle != null) tipTitleTV.setText(mTitle);
 
-        String pageNumStr = "Tip #" + mNum;
+        String pageNumStr = "<- Tip #" + mNum + " ->";
         if (mNum != 0) tipNumTV.setText(pageNumStr);
 
         if (mImgId != -1) tipIV.setImageResource(mImgId);
