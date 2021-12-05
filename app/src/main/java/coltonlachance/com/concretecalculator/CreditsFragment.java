@@ -1,6 +1,8 @@
 package coltonlachance.com.concretecalculator;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -93,6 +96,16 @@ public class CreditsFragment extends Fragment {
             }
         });
 
+        Button shareButton = view.findViewById(R.id.shareButton);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tweet = new Intent(Intent.ACTION_VIEW);
+                tweet.setData(Uri.parse("http://twitter.com/?status=" + Uri.encode("This app's great for all concrete related projects!\nCheckout Concrete Buddy!")));
+                startActivity(tweet);
+            }
+        });
+
         return view;
     }
 
@@ -106,11 +119,6 @@ public class CreditsFragment extends Fragment {
 
             DataTypeItem item = getItem(position);
 
-            /*
-
-            ---------------COMMENT AND UNCOMMENT HERE!-----------------
-
-            */
             if (convertView == null) {
                 //convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_view,parent,false);
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.my_item_view,parent,false);

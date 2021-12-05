@@ -16,7 +16,8 @@
         android:layout_height="match_parent"
         android:layout_weight="3"
         android:background="#FFFFFF"
-        android:paddingTop="20dp"></ListView>
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"></ListView>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,7 +29,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/largeButtonMargin"
-            android:background="#6A6A6A"
             android:fontFamily="@font/imprima"
             android:padding="10dp"
             android:text="@string/creditPrompt"
@@ -38,15 +38,25 @@
             android:textStyle="bold" />
     </ScrollView>
 
-    <Button
-        android:id="@+id/button"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/mediumButtonMargin"
         android:layout_weight="4"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="@string/creditShare"
-        android:textSize="@dimen/buttonMediumText"
-        android:textStyle="italic" />
+        android:background="#FFFFFF">
+        android:layout_weight="4"
+
+        <Button
+            android:id="@+id/shareButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mediumButtonMargin"
+            android:fontFamily="@font/alfa_slab_one"
+            android:padding="8dp"
+            android:text="@string/creditShare"
+            android:textSize="@dimen/buttonMediumText"
+            android:textStyle="italic"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
