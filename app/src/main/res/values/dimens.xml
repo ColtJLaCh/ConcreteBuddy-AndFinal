@@ -7,6 +7,7 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="largeButtonMargin">16dp</dimen>
+    <dimen name="mediumButtonMargin">8dp</dimen>
     <dimen name="titleMedium">34sp</dimen>
     <dimen name="buttonMediumText">24sp</dimen>
     <dimen name="buttonLargeText">34sp</dimen>

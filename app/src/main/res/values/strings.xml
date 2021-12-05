@@ -77,4 +77,5 @@
 
     <!-- credits text -->
     <string name="creditPrompt">Select item from list to see its attribution.</string>
+    <string name="creditShare">Share On Twitter!</string>
 </resources>
