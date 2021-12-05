@@ -22,7 +22,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     public boolean onPreferenceTreeClick(Preference myPref) {
         if (myPref.getKey().equals("feedback")) {
             NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-            navController.navigate(R.id.nav_listings); //TODO: Change this to contact page
+            navController.navigate(R.id.nav_contact);
         }
         return super.onPreferenceTreeClick(myPref);
     }
