@@ -33,4 +33,9 @@
         android:name="coltonlachance.com.concretecalculator.HomeFragment"
         android:label="@string/blankSpace"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_credits"
+        android:name="coltonlachance.com.concretecalculator.CreditsFragment"
+        android:label="Credits"
+        tools:layout="@layout/fragment_credits" />
 </navigation>

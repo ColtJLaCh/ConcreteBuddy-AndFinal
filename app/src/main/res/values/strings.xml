@@ -68,4 +68,7 @@
     <string name="contactSMS">SMS</string>
     <string name="contactPhone">PHONE</string>
     <string name="contactMap">LOCATION</string>
+
+    <!-- credits text -->
+    <string name="creditPrompt">Select item from list to see its attribution.</string>
 </resources>
