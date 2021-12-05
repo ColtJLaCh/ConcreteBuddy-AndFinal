@@ -23,4 +23,9 @@
         android:id="@+id/nav_settings"
         android:name="coltonlachance.com.concretecalculator.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="coltonlachance.com.concretecalculator.ContactFragment"
+        android:label="Contact"
+        tools:layout="@layout/fragment_contact" />
 </navigation>

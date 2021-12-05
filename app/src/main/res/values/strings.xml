@@ -11,6 +11,8 @@
     <string name="menu_calc">Calculator</string>
     <string name="menu_tips">Tips</string>
     <string name="menu_listings">Listings</string>
+    <string name="menu_contact">Contact</string>
+    <string name="menu_credits">Credits</string>
 
     <!-- placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -53,4 +55,11 @@
     <string name="settingsSetBold">Bold Text</string>
     <string name="settingsMeasurementType">Set Units</string>
     <string name="settingsSendFeedback">Send App Feedback</string>
+
+    <!-- settings text -->
+    <string name="contactTitle">Contact me for feedback or any inquiries you may have!</string>
+    <string name="contactEmail">EMAIL</string>
+    <string name="contactSMS">SMS</string>
+    <string name="contactPhone">PHONE</string>
+    <string name="contactMap">LOCATION</string>
 </resources>

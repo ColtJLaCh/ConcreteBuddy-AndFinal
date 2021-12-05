@@ -47,8 +47,6 @@ import java.util.Date;
  */
 public class CalculatorFragment extends Fragment {
 
-    private static final int REQUEST_EXTERNAL_STORAGe = 1;
-
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
