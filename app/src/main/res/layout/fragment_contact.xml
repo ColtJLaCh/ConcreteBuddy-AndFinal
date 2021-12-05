@@ -12,36 +12,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:fontFamily="@font/alfa_slab_one"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/contactTitle"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/contactEMAIL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="4dp"
         android:layout_weight="1"
-        android:text="@string/contactEmail" />
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/contactEmail"
+        android:textSize="34sp" />
 
     <Button
         android:id="@+id/contactSMS"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="4dp"
         android:layout_weight="1"
-        android:text="@string/contactSMS" />
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/contactSMS"
+        android:textSize="34sp" />
 
     <Button
         android:id="@+id/contactPHONE"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="4dp"
         android:layout_weight="1"
-        android:text="@string/contactPhone" />
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/contactPhone"
+        android:textSize="34sp" />
 
     <Button
         android:id="@+id/contactLOCATION"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="4dp"
         android:layout_weight="1"
-        android:text="@string/contactMap" />
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/contactMap"
+        android:textSize="34sp" />
 
 </LinearLayout>
