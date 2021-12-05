@@ -69,6 +69,9 @@
     <string name="contactPhone">PHONE</string>
     <string name="contactMap">LOCATION</string>
 
+    <!-- listings text -->
+    <string name="listingsButton">Search Listings</string>
+
     <!-- credits text -->
     <string name="creditPrompt">Select item from list to see its attribution.</string>
 </resources>

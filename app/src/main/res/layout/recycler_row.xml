@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    app:cardBackgroundColor="#E3E3E3"
+    app:cardBackgroundColor="#FFFFFF"
     app:contentPadding="4dp">
 
     <LinearLayout
