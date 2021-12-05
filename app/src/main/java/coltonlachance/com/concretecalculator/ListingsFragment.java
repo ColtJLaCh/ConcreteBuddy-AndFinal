@@ -3,6 +3,7 @@ package coltonlachance.com.concretecalculator;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -75,8 +76,12 @@ public class ListingsFragment extends Fragment {
         listings.add(new Listings("Bag of concrete, fiber glass mix.", "A 4oz bag of fiber glass strengthened concrete.", "29.99"));
         listings.add(new Listings("SLABS", "I got 30+ slabs I want to get rid of, real cheap!", "2.50"));
 
+
+
         RecyclerView recyclerView = view.findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        DividerItemDecoration divider = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(divider);
 
         CustomRecyclerViewAdapter adapter = new CustomRecyclerViewAdapter(listings);
         recyclerView.setAdapter(adapter);
