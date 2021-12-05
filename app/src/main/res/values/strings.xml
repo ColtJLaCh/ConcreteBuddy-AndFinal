@@ -9,6 +9,9 @@
 
     <string name="blankSpace">   </string>
 
+    <string name="headerTitle">CONCRETE BUDDY</string>
+    <string name="headerEmail">concretebuddy@outlook.com</string>
+
     <!-- home text -->
     <string name="homeNav">Navigate using sidebar on top left!</string>
     <string name="homeImgDesc">Concrete Buddy, rotated slightly making the title tilted.</string>
