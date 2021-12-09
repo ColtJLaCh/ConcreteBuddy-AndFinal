@@ -193,6 +193,10 @@ public class CalculatorFragment extends Fragment {
 
         Button calcButton = view.findViewById(R.id.calcButton);
 
+        /**calcButton.onClick
+         * Grabs values from textfields, inserts them into the calcSlabVolume method.
+         * @author Colton LaChance
+         */
         calcButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

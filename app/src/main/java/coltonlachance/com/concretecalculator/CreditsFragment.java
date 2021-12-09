@@ -18,10 +18,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CreditsFragment#newInstance} factory method to
- * create an instance of this fragment.
+/**CreditsFragment extends Fragment
+ * A credits page for ConcreteBuddy app
+ * contains a list of attributions that are clickable,
+ * showing a small paragraph below the list, describing the source
+ * of the attribution.
  */
 public class CreditsFragment extends Fragment {
 
@@ -109,6 +110,10 @@ public class CreditsFragment extends Fragment {
         return view;
     }
 
+    /**CustomAdapter extends ArrayAdapter
+     * A list adapter for the list of attributions in the credits page
+     * @author Colton LaChance
+     * */
     public class CustomAdapter extends ArrayAdapter<DataTypeItem> {
         public CustomAdapter(Context context, ArrayList<DataTypeItem> items) {
             super(context,0,items);

@@ -11,10 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ContactFragment#newInstance} factory method to
- * create an instance of this fragment.
+/**ContactFragment extends Fragment
+ * A contact page for ConcreteBuddy app
+ * @author Colton LaChance
  */
 public class ContactFragment extends Fragment {
 

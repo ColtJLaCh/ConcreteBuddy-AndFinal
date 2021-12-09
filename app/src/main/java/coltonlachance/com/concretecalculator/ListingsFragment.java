@@ -16,10 +16,11 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ListingsFragment#newInstance} factory method to
- * create an instance of this fragment.
+/**ListingsFragment extends Fragment
+ * A listings page for buying concrete
+ * Contains a recycler view containing 'concrete listings' filled with dummy data
+ * Also has an auto search button, seraching 'concrete listings' into google
+ * @author Colton LaChance
  */
 public class ListingsFragment extends Fragment {
 

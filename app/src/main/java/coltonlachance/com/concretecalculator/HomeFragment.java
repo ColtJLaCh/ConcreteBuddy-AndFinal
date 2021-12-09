@@ -11,10 +11,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
+/**HomeFragment extends Fragment
+ * A home page for concrete calculator app,
+ * Contains title and small animation
+ * @author Colton LaChance
  */
 public class HomeFragment extends Fragment {
 

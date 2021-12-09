@@ -1,5 +1,9 @@
 package coltonlachance.com.concretecalculator;
 
+/**DataTypeItem
+ * An item for a custom list view
+ * @author Colton LaChance
+ */
 public class DataTypeItem {
     private String name;
     private String desc;
